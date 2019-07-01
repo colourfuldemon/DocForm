@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdffe6;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 0.9em;
+}
+
+/** Head Area **/
+header {
+  margin: 0;
+	padding: 1em;
+  background-color: #6b7363;
+  box-shadow: 0 1px 1em rgba(0,0,0,0.8);
+}
+
+header h1 {
+  margin: 0 0 1em 0;
+	padding: 0;
+	font-size: 1.5em;
+}
+
+/* Header Navigation */
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0.5em;
+  list-style: none;
+  flex-grow: 0;
+}
+
+nav ul li a {
+	padding: 0.5em;
+  text-decoration: none;
+	border-radius: 0.5em;
+}
+
+nav ul li a:link {
+  color: #ffffff;
+}
+
+nav ul li a:visited {
+  color: #ffffff;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+	background-color: #dcdfe5;
+}
+
+
+/** Main Content Area **/
+main {
+  margin: 2em 2em 2em 2em;
+  padding: 1.5em;
+  background-color: #6b7363;
+  box-shadow: 0 0 1em rgba(0,0,0,0.8);
+  border-radius: 1em;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 1em 0;
+  color: #ffffff;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #6b7363;
+}
+
+h2 {
+	color: #ffffff;	
+}
+
+p {
+	color: #ffffff;	
+}
+
+td {
+	color: #ffffff;
+}
+.button {
+  background-color: #797a79;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.button:hover {
+  background-color: #464746;
+}
+.mybutton {
+  background-color: #797a79;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mybutton:hover {
+	 background-color: #464746;
+}
+
+.img {
+	align: middle;
+	padding: 15px 15px 15px 15px;
+}
+h4 {
+	color: #ffffff;
+}

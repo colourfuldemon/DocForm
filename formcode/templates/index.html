@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang=”en” dir=”ltr”>
+  <head>
+    <meta charset=”UTF-8”>
+    <title>My Application: {{ title }}</title>
+    <meta name="keywords" content="">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/docform.css') }}">
+  </head>
+  
+  <body>
+    <header>
+      <h1>{{ title }}</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/athletes">Tracks</a></li>
+		  <a href="/login" class="button">Login</a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+  <center>
+	  <img src='/static/images/milfordimage1.jpg' alt="My Image" width='425' height='210'>
+	  <img src='/static/images/milfordimage2.jpg' alt="My Image" width='425' height='210'>
+	  <img src='/static/images/milfordimage3.jpg' alt="My Image" width='425' height='210'>
+  </center>
+  <center>
+	  <img src='/static/images/arthurs.jpg' alt="My Image" width='425' height='210'>
+	  <img src='/static/images/waterfall.jpg' alt="My Image" width='425' height='210'>
+	  <img src='/static/images/hill.jpg' alt="My Image" width='425' height='210'>
+  </center>
+
+</html>
+
