@@ -1,7 +1,3 @@
-# https://www.tutorialspoint.com/flask/flask_sqlite.htm
-# http://flask.pocoo.org/docs/0.12/patterns/sqlite3/
-# https://github.com/stevedunford/NZVintageRadios
-
 import sqlite3
 from flask import Flask, Response, render_template, abort
 
