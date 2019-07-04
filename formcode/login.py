@@ -14,6 +14,7 @@ class DocForm(): #form class
         self.recorded_cond = recorded_cond
         self.username = username
         self.useremail = useremail
+        self.tracks = tracks
         
         
         self.title = Label(window, text="DOC Form", font=("Arial", 14))
@@ -80,8 +81,17 @@ class DocForm(): #form class
     
     def selectedtrack(self, event):
         '''retrieves the selected track from the track combo box'''
-        track = self.combo.get()
-        self.track_name = track    
+        try:
+            track = self.combo.get()
+            if track in self.tracks:
+                self.track_name = track 
+            else:
+                raise AttributeError           
+        except AttributeError:
+            print("Please select correct trackname\n")  
+            os._exit(0)            
+            
+        
      
     def mud(self):
         '''does stuff'''
@@ -125,12 +135,24 @@ class DocForm(): #form class
         '''last part of the program, enters the information into the database'''
         self.final['text'] = "Completed!"
         
-        string = ' '
-        final_condition = string.join(self.recorded_cond)
+        string = ', '
+        set_final = set(self.recorded_cond)
+        conds = list(set_final)
+        final_condition = string.join(conds)
             
         #ensures the condition is a string that can be entered into the database field
         
-        track_name = self.track_name
+        try:
+            track_name = self.track_name
+            if track_name in self.tracks:
+                track_name = self.track_name
+            else:
+                raise AttributeError           
+        except AttributeError:
+            print("Please select correct trackname\n")  
+            os._exit(0)            
+        
+                
         difficulty = self.diff
         conditions = final_condition
        
@@ -260,7 +282,7 @@ class Login:
 def main():
     window = Tk()
     user_pass = {'hello':'rach', 'password':'daz'}
-    user_email = {'rach':'rhodgson984@gmail.com', 'daz':'eyreriver@gmail.com'}
+    user_email = {'rach':'rhodgson984@gmail.com', 'daz':'vanslooten.nathan@gmail.com'}
     users = []
     for name in user_pass.values():
         users.append(name)
